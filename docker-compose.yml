@@ -1,0 +1,8 @@
+version: '3'
+services:
+  scraping:
+    build: ./
+    volumes:
+      - ./scripts:/root/scripts
+      - ./csv:/root/csv
+    entrypoint: "/usr/local/bin/python3 -u /root/scripts/scraping.py"
